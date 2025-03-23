@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="includes/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="includes/script.js"></script>
+    <title>Lab 07 - House MD Quiz</title>
+</head>
+<body>
+<main>
+    <section id="quizSection">
+        <div id="quizContainer" class="container rounded">
+            <div id="quizTitle" class="text-center p-3">
+                <h1><span id="houseSquare">H</span><span id="quizTitle" class="text-uppercase text-decoration-underline">ouse MD Quiz</span></h1>
+                <h3>Everybody Lies</h3>
+                <h5 class="quizTimer">00:00</h5>
+                <hr>
+            </div>
+            <div id="quizGreeting" class="p-2">
+                <h1 class="fs-1">Let's Begin</h1>
+                <p id="playerInputLabel" class="fs-3">What's your name?</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="quizPlayer form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <button id="startQuizBtn" class="btn btn-primary" type="button">Start</button>
+                </div>
+            </div>
+            <div id="quizContent" class="pb-2">
+                <h4 id="chosenQuizName"><!--Player--></h4>
+                <h3 id="containerQuizScore" class="text-success quizScore"><!--Quiz Score Here--></h3>
+                <!-- Quiz questions here -->
+            </div>
+        </div>
+        <div id="quizResultsModal">
+            <!-- Modal -->
+            <div class="modal fade text-center" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="quizModalLabel">Quiz results</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="quizFinishTime">You finished in <span class="quizTimer"></span></p>
+                        <p class="quizScore"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+</main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

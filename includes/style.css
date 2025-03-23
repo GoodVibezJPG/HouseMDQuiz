@@ -1,0 +1,127 @@
+/* CSS HEX */
+:root {
+    --monitor-gray: #3C3C3C;
+    --hospital-gown: #778899;
+    --bedpan-gray: #6C757D;
+    --overhang-yellow: #F0E68C;
+    --siren-red: #D35400;
+
+    --off-white: #e3d8cb;
+    --hosptial-white: #F7F7F7;
+    --legal-black: #1B1212;
+    --coffee-brown: #483C32;
+    --orange: #CC7722;
+
+    --page-font: 'Trebuchet MS', sans-serif;
+}
+
+* {
+    font-family: var(--page-font);
+}
+body {
+    background: radial-gradient(circle, var(--hosptial-white), var(--off-white));
+}
+
+#quizContainer {
+    background-color: var(--monitor-gray);
+    color: var(--hosptial-white);
+    box-shadow: 10px 5px 5px rgb(0 0 0 / 20%);
+}
+
+#houseSquare {
+    border : 3px solid var(--hosptial-white);
+    padding: 4px 12px 4px 12px;
+    margin-right: 5px;
+    line-height: 0;
+    letter-spacing: normal;
+}
+#quizTitle {
+    letter-spacing: 10px;
+    text-underline-offset: 10px;
+    text-shadow: 0 0 1px var(--hosptial-white);
+}
+.quizTimer{
+    text-shadow: 0 0 5px var(--hosptial-white);
+}
+.quizPlayer{
+    text-transform: capitalize;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bedpan-gray);
+    outline: none;
+    cursor: pointer;
+}
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background-color: var(--siren-red);
+    border-color: var(--siren-red);
+}
+input[type="checkbox"] {
+    border-radius: 4px; 
+}
+input[type="radio"]:hover, input[type="checkbox"]:hover {
+    border-color: var(--orange);
+}
+
+.card{
+    background: linear-gradient(100deg, var(--hospital-gown) 85%, var(--overhang-yellow));
+    border-radius: 0px;
+}
+.card h4{
+    font-weight: bold;
+}
+.question label{
+    font-size:large;
+}
+.form-check-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--legal-black);
+    line-height: 1.5;
+    letter-spacing: 0.75px;
+    text-transform: capitalize;
+    
+}
+
+.hintLabel {
+    cursor: help;
+    display: inline;
+    font-weight: bold;
+}
+.quizFinish{
+    background-color: yellow;
+}
+
+
+
+.shake{
+    animation: shake 0.5s;
+}
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 0); }
+    50% { transform: translate(3px, 0); }
+    75% { transform: translate(-3px, 0); }
+    100% { transform: translate(3px, 0); }
+}
+
+
+.btn-primary {
+    background-color: var(--siren-red);
+    border: var(--siren-red);
+    transition: background-color 0.3s ease;
+    border-radius: 0px;
+}
+.btn-primary:hover {
+    background-color: var(--orange);
+}
+.btn-primary:focus {
+    background-color: var(--orange);
+}
+.btn-primary:active {
+    background-color: var(--orange);
+    transform: scale(0.95); x   
+}
